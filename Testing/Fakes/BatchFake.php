@@ -1,12 +1,12 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace WPWhales\Support\Testing\Fakes;
 
 use Carbon\CarbonImmutable;
-use Illuminate\Bus\Batch;
-use Illuminate\Bus\UpdatedBatchJobCounts;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Collection;
+use WPWhales\Bus\Batch;
+use WPWhales\Bus\UpdatedBatchJobCounts;
+use WPWhales\Support\Carbon;
+use WPWhales\Support\Collection;
 
 class BatchFake extends Batch
 {
@@ -75,7 +75,7 @@ class BatchFake extends Batch
     /**
      * Add additional jobs to the batch.
      *
-     * @param  \Illuminate\Support\Enumerable|object|array  $jobs
+     * @param  \WPWhales\Support\Enumerable|object|array  $jobs
      * @return self
      */
     public function add($jobs)
@@ -104,7 +104,7 @@ class BatchFake extends Batch
      * Decrement the pending jobs for the batch.
      *
      * @param  string  $jobId
-     * @return \Illuminate\Bus\UpdatedBatchJobCounts
+     * @return \WPWhales\Bus\UpdatedBatchJobCounts
      */
     public function decrementPendingJobs(string $jobId)
     {
@@ -127,7 +127,7 @@ class BatchFake extends Batch
      * Increment the failed jobs for the batch.
      *
      * @param  string  $jobId
-     * @return \Illuminate\Bus\UpdatedBatchJobCounts
+     * @return \WPWhales\Bus\UpdatedBatchJobCounts
      */
     public function incrementFailedJobs(string $jobId)
     {

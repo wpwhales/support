@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support\Traits;
+namespace WPWhales\Support\Traits;
 
 trait Tappable
 {
@@ -8,7 +8,7 @@ trait Tappable
      * Call the given Closure with this instance then return the instance.
      *
      * @param  callable|null  $callback
-     * @return $this|\Illuminate\Support\HigherOrderTapProxy
+     * @return $this|\WPWhales\Support\HigherOrderTapProxy
      */
     public function tap($callback = null)
     {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 use Closure;
-use Illuminate\Filesystem\Filesystem;
+use WPWhales\Filesystem\Filesystem;
 use RuntimeException;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Process\PhpExecutableFinder;
@@ -14,7 +14,7 @@ class Composer
     /**
      * The filesystem instance.
      *
-     * @var \Illuminate\Filesystem\Filesystem
+     * @var \WPWhales\Filesystem\Filesystem
      */
     protected $files;
 
@@ -28,7 +28,7 @@ class Composer
     /**
      * Create a new Composer manager instance.
      *
-     * @param  \Illuminate\Filesystem\Filesystem  $files
+     * @param  \WPWhales\Filesystem\Filesystem  $files
      * @param  string|null  $workingPath
      * @return void
      */

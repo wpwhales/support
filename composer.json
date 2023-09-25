@@ -1,5 +1,5 @@
 {
-    "name": "illuminate/support",
+    "name": "wpwhales/support",
     "description": "The Illuminate Support package.",
     "license": "MIT",
     "homepage": "https://laravel.com",
@@ -19,10 +19,10 @@
         "ext-filter": "*",
         "ext-mbstring": "*",
         "doctrine/inflector": "^2.0",
-        "illuminate/collections": "^11.0",
-        "illuminate/conditionable": "^11.0",
-        "illuminate/contracts": "^11.0",
-        "illuminate/macroable": "^11.0",
+        "wpwhales/collections": "dev-master",
+        "wpwhales/conditionable": "dev-master",
+        "wpwhales/contracts": "dev-master",
+        "wpwhales/macroable": "dev-master",
         "voku/portable-ascii": "^2.0"
     },
     "conflict": {
@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Illuminate\\Support\\": ""
+            "WPWhales\\Support\\": ""
         },
         "files": [
             "helpers.php"
@@ -42,7 +42,7 @@
         }
     },
     "suggest": {
-        "illuminate/filesystem": "Required to use the composer class (^11.0).",
+        "wpwhales/filesystem": "Required to use the composer class (^11.0).",
         "league/commonmark": "Required to use Str::markdown() and Stringable::markdown() (^2.0.2).",
         "ramsey/uuid": "Required to use Str::uuid() (^4.7).",
         "symfony/process": "Required to use the composer class (^6.3).",

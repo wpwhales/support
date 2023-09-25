@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 use Carbon\Factory;
 use InvalidArgumentException;
@@ -9,20 +9,20 @@ use InvalidArgumentException;
  * @see https://carbon.nesbot.com/docs/
  * @see https://github.com/briannesbitt/Carbon/blob/master/src/Carbon/Factory.php
  *
- * @method \Illuminate\Support\Carbon create($year = 0, $month = 1, $day = 1, $hour = 0, $minute = 0, $second = 0, $tz = null)
- * @method \Illuminate\Support\Carbon createFromDate($year = null, $month = null, $day = null, $tz = null)
- * @method \Illuminate\Support\Carbon|false createFromFormat($format, $time, $tz = null)
- * @method \Illuminate\Support\Carbon createFromTime($hour = 0, $minute = 0, $second = 0, $tz = null)
- * @method \Illuminate\Support\Carbon createFromTimeString($time, $tz = null)
- * @method \Illuminate\Support\Carbon createFromTimestamp($timestamp, $tz = null)
- * @method \Illuminate\Support\Carbon createFromTimestampMs($timestamp, $tz = null)
- * @method \Illuminate\Support\Carbon createFromTimestampUTC($timestamp)
- * @method \Illuminate\Support\Carbon createMidnightDate($year = null, $month = null, $day = null, $tz = null)
- * @method \Illuminate\Support\Carbon|false createSafe($year = null, $month = null, $day = null, $hour = null, $minute = null, $second = null, $tz = null)
+ * @method \WPWhales\Support\Carbon create($year = 0, $month = 1, $day = 1, $hour = 0, $minute = 0, $second = 0, $tz = null)
+ * @method \WPWhales\Support\Carbon createFromDate($year = null, $month = null, $day = null, $tz = null)
+ * @method \WPWhales\Support\Carbon|false createFromFormat($format, $time, $tz = null)
+ * @method \WPWhales\Support\Carbon createFromTime($hour = 0, $minute = 0, $second = 0, $tz = null)
+ * @method \WPWhales\Support\Carbon createFromTimeString($time, $tz = null)
+ * @method \WPWhales\Support\Carbon createFromTimestamp($timestamp, $tz = null)
+ * @method \WPWhales\Support\Carbon createFromTimestampMs($timestamp, $tz = null)
+ * @method \WPWhales\Support\Carbon createFromTimestampUTC($timestamp)
+ * @method \WPWhales\Support\Carbon createMidnightDate($year = null, $month = null, $day = null, $tz = null)
+ * @method \WPWhales\Support\Carbon|false createSafe($year = null, $month = null, $day = null, $hour = null, $minute = null, $second = null, $tz = null)
  * @method void disableHumanDiffOption($humanDiffOption)
  * @method void enableHumanDiffOption($humanDiffOption)
  * @method mixed executeWithLocale($locale, $func)
- * @method \Illuminate\Support\Carbon fromSerialized($value)
+ * @method \WPWhales\Support\Carbon fromSerialized($value)
  * @method array getAvailableLocales()
  * @method array getDays()
  * @method int getHumanDiffOptions()
@@ -30,7 +30,7 @@ use InvalidArgumentException;
  * @method array getLastErrors()
  * @method string getLocale()
  * @method int getMidDayAt()
- * @method \Illuminate\Support\Carbon|null getTestNow()
+ * @method \WPWhales\Support\Carbon|null getTestNow()
  * @method \Symfony\Component\Translation\TranslatorInterface getTranslator()
  * @method int getWeekEndsAt()
  * @method int getWeekStartsAt()
@@ -39,7 +39,7 @@ use InvalidArgumentException;
  * @method bool hasMacro($name)
  * @method bool hasRelativeKeywords($time)
  * @method bool hasTestNow()
- * @method \Illuminate\Support\Carbon instance($date)
+ * @method \WPWhales\Support\Carbon instance($date)
  * @method bool isImmutable()
  * @method bool isModifiableUnit($unit)
  * @method bool isMutable()
@@ -50,12 +50,12 @@ use InvalidArgumentException;
  * @method bool localeHasPeriodSyntax($locale)
  * @method bool localeHasShortUnits($locale)
  * @method void macro($name, $macro)
- * @method \Illuminate\Support\Carbon|null make($var)
- * @method \Illuminate\Support\Carbon maxValue()
- * @method \Illuminate\Support\Carbon minValue()
+ * @method \WPWhales\Support\Carbon|null make($var)
+ * @method \WPWhales\Support\Carbon maxValue()
+ * @method \WPWhales\Support\Carbon minValue()
  * @method void mixin($mixin)
- * @method \Illuminate\Support\Carbon now($tz = null)
- * @method \Illuminate\Support\Carbon parse($time = null, $tz = null)
+ * @method \WPWhales\Support\Carbon now($tz = null)
+ * @method \WPWhales\Support\Carbon parse($time = null, $tz = null)
  * @method string pluralUnit(string $unit)
  * @method void resetMonthsOverflow()
  * @method void resetToStringFormat()
@@ -74,12 +74,12 @@ use InvalidArgumentException;
  * @method bool shouldOverflowMonths()
  * @method bool shouldOverflowYears()
  * @method string singularUnit(string $unit)
- * @method \Illuminate\Support\Carbon today($tz = null)
- * @method \Illuminate\Support\Carbon tomorrow($tz = null)
+ * @method \WPWhales\Support\Carbon today($tz = null)
+ * @method \WPWhales\Support\Carbon tomorrow($tz = null)
  * @method void useMonthsOverflow($monthsOverflow = true)
  * @method void useStrictMode($strictModeEnabled = true)
  * @method void useYearsOverflow($yearsOverflow = true)
- * @method \Illuminate\Support\Carbon yesterday($tz = null)
+ * @method \WPWhales\Support\Carbon yesterday($tz = null)
  */
 class DateFactory
 {

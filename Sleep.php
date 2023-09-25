@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 use Carbon\Carbon;
 use Carbon\CarbonInterval;
 use DateInterval;
-use Illuminate\Support\Traits\Macroable;
+use WPWhales\Support\Traits\Macroable;
 use PHPUnit\Framework\Assert as PHPUnit;
 use RuntimeException;
 

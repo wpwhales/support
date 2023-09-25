@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
-use Illuminate\Support\DateFactory;
+use WPWhales\Support\DateFactory;
 
 /**
  * @see https://carbon.nesbot.com/docs/
@@ -13,20 +13,20 @@ use Illuminate\Support\DateFactory;
  * @method static void useCallable(callable $callable)
  * @method static void useClass(string $dateClass)
  * @method static void useFactory(object $factory)
- * @method static \Illuminate\Support\Carbon create($year = 0, $month = 1, $day = 1, $hour = 0, $minute = 0, $second = 0, $tz = null)
- * @method static \Illuminate\Support\Carbon createFromDate($year = null, $month = null, $day = null, $tz = null)
- * @method static \Illuminate\Support\Carbon|false createFromFormat($format, $time, $tz = null)
- * @method static \Illuminate\Support\Carbon createFromTime($hour = 0, $minute = 0, $second = 0, $tz = null)
- * @method static \Illuminate\Support\Carbon createFromTimeString($time, $tz = null)
- * @method static \Illuminate\Support\Carbon createFromTimestamp($timestamp, $tz = null)
- * @method static \Illuminate\Support\Carbon createFromTimestampMs($timestamp, $tz = null)
- * @method static \Illuminate\Support\Carbon createFromTimestampUTC($timestamp)
- * @method static \Illuminate\Support\Carbon createMidnightDate($year = null, $month = null, $day = null, $tz = null)
- * @method static \Illuminate\Support\Carbon|false createSafe($year = null, $month = null, $day = null, $hour = null, $minute = null, $second = null, $tz = null)
+ * @method static \WPWhales\Support\Carbon create($year = 0, $month = 1, $day = 1, $hour = 0, $minute = 0, $second = 0, $tz = null)
+ * @method static \WPWhales\Support\Carbon createFromDate($year = null, $month = null, $day = null, $tz = null)
+ * @method static \WPWhales\Support\Carbon|false createFromFormat($format, $time, $tz = null)
+ * @method static \WPWhales\Support\Carbon createFromTime($hour = 0, $minute = 0, $second = 0, $tz = null)
+ * @method static \WPWhales\Support\Carbon createFromTimeString($time, $tz = null)
+ * @method static \WPWhales\Support\Carbon createFromTimestamp($timestamp, $tz = null)
+ * @method static \WPWhales\Support\Carbon createFromTimestampMs($timestamp, $tz = null)
+ * @method static \WPWhales\Support\Carbon createFromTimestampUTC($timestamp)
+ * @method static \WPWhales\Support\Carbon createMidnightDate($year = null, $month = null, $day = null, $tz = null)
+ * @method static \WPWhales\Support\Carbon|false createSafe($year = null, $month = null, $day = null, $hour = null, $minute = null, $second = null, $tz = null)
  * @method static void disableHumanDiffOption($humanDiffOption)
  * @method static void enableHumanDiffOption($humanDiffOption)
  * @method static mixed executeWithLocale($locale, $func)
- * @method static \Illuminate\Support\Carbon fromSerialized($value)
+ * @method static \WPWhales\Support\Carbon fromSerialized($value)
  * @method static array getAvailableLocales()
  * @method static array getDays()
  * @method static int getHumanDiffOptions()
@@ -34,7 +34,7 @@ use Illuminate\Support\DateFactory;
  * @method static array getLastErrors()
  * @method static string getLocale()
  * @method static int getMidDayAt()
- * @method static \Illuminate\Support\Carbon|null getTestNow()
+ * @method static \WPWhales\Support\Carbon|null getTestNow()
  * @method static \Symfony\Component\Translation\TranslatorInterface getTranslator()
  * @method static int getWeekEndsAt()
  * @method static int getWeekStartsAt()
@@ -43,7 +43,7 @@ use Illuminate\Support\DateFactory;
  * @method static bool hasMacro($name)
  * @method static bool hasRelativeKeywords($time)
  * @method static bool hasTestNow()
- * @method static \Illuminate\Support\Carbon instance($date)
+ * @method static \WPWhales\Support\Carbon instance($date)
  * @method static bool isImmutable()
  * @method static bool isModifiableUnit($unit)
  * @method static bool isMutable()
@@ -54,12 +54,12 @@ use Illuminate\Support\DateFactory;
  * @method static bool localeHasPeriodSyntax($locale)
  * @method static bool localeHasShortUnits($locale)
  * @method static void macro($name, $macro)
- * @method static \Illuminate\Support\Carbon|null make($var)
- * @method static \Illuminate\Support\Carbon maxValue()
- * @method static \Illuminate\Support\Carbon minValue()
+ * @method static \WPWhales\Support\Carbon|null make($var)
+ * @method static \WPWhales\Support\Carbon maxValue()
+ * @method static \WPWhales\Support\Carbon minValue()
  * @method static void mixin($mixin)
- * @method static \Illuminate\Support\Carbon now($tz = null)
- * @method static \Illuminate\Support\Carbon parse($time = null, $tz = null)
+ * @method static \WPWhales\Support\Carbon now($tz = null)
+ * @method static \WPWhales\Support\Carbon parse($time = null, $tz = null)
  * @method static string pluralUnit(string $unit)
  * @method static void resetMonthsOverflow()
  * @method static void resetToStringFormat()
@@ -78,14 +78,14 @@ use Illuminate\Support\DateFactory;
  * @method static bool shouldOverflowMonths()
  * @method static bool shouldOverflowYears()
  * @method static string singularUnit(string $unit)
- * @method static \Illuminate\Support\Carbon today($tz = null)
- * @method static \Illuminate\Support\Carbon tomorrow($tz = null)
+ * @method static \WPWhales\Support\Carbon today($tz = null)
+ * @method static \WPWhales\Support\Carbon tomorrow($tz = null)
  * @method static void useMonthsOverflow($monthsOverflow = true)
  * @method static void useStrictMode($strictModeEnabled = true)
  * @method static void useYearsOverflow($yearsOverflow = true)
- * @method static \Illuminate\Support\Carbon yesterday($tz = null)
+ * @method static \WPWhales\Support\Carbon yesterday($tz = null)
  *
- * @see \Illuminate\Support\DateFactory
+ * @see \WPWhales\Support\DateFactory
  */
 class Date extends Facade
 {

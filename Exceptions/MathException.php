@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support\Exceptions;
+namespace WPWhales\Support\Exceptions;
 
 use RuntimeException;
 

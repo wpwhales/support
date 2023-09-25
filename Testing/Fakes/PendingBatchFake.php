@@ -1,24 +1,24 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace WPWhales\Support\Testing\Fakes;
 
-use Illuminate\Bus\PendingBatch;
-use Illuminate\Support\Collection;
+use WPWhales\Bus\PendingBatch;
+use WPWhales\Support\Collection;
 
 class PendingBatchFake extends PendingBatch
 {
     /**
      * The fake bus instance.
      *
-     * @var \Illuminate\Support\Testing\Fakes\BusFake
+     * @var \WPWhales\Support\Testing\Fakes\BusFake
      */
     protected $bus;
 
     /**
      * Create a new pending batch instance.
      *
-     * @param  \Illuminate\Support\Testing\Fakes\BusFake  $bus
-     * @param  \Illuminate\Support\Collection  $jobs
+     * @param  \WPWhales\Support\Testing\Fakes\BusFake  $bus
+     * @param  \WPWhales\Support\Collection  $jobs
      * @return void
      */
     public function __construct(BusFake $bus, Collection $jobs)
@@ -30,7 +30,7 @@ class PendingBatchFake extends PendingBatch
     /**
      * Dispatch the batch.
      *
-     * @return \Illuminate\Bus\Batch
+     * @return \WPWhales\Bus\Batch
      */
     public function dispatch()
     {
@@ -40,7 +40,7 @@ class PendingBatchFake extends PendingBatch
     /**
      * Dispatch the batch after the response is sent to the browser.
      *
-     * @return \Illuminate\Bus\Batch
+     * @return \WPWhales\Bus\Batch
      */
     public function dispatchAfterResponse()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 class AggregateServiceProvider extends ServiceProvider
 {

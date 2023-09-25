@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
 /**
- * @method static \Illuminate\Hashing\BcryptHasher createBcryptDriver()
- * @method static \Illuminate\Hashing\ArgonHasher createArgonDriver()
- * @method static \Illuminate\Hashing\Argon2IdHasher createArgon2idDriver()
+ * @method static \WPWhales\Hashing\BcryptHasher createBcryptDriver()
+ * @method static \WPWhales\Hashing\ArgonHasher createArgonDriver()
+ * @method static \WPWhales\Hashing\Argon2IdHasher createArgon2idDriver()
  * @method static array info(string $hashedValue)
  * @method static string make(string $value, array $options = [])
  * @method static bool check(string $value, string $hashedValue, array $options = [])
@@ -13,14 +13,14 @@ namespace Illuminate\Support\Facades;
  * @method static bool isHashed(string $value)
  * @method static string getDefaultDriver()
  * @method static mixed driver(string|null $driver = null)
- * @method static \Illuminate\Hashing\HashManager extend(string $driver, \Closure $callback)
+ * @method static \WPWhales\Hashing\HashManager extend(string $driver, \Closure $callback)
  * @method static array getDrivers()
- * @method static \Illuminate\Contracts\Container\Container getContainer()
- * @method static \Illuminate\Hashing\HashManager setContainer(\Illuminate\Contracts\Container\Container $container)
- * @method static \Illuminate\Hashing\HashManager forgetDrivers()
+ * @method static \WPWhales\Contracts\Container\Container getContainer()
+ * @method static \WPWhales\Hashing\HashManager setContainer(\WPWhales\Contracts\Container\Container $container)
+ * @method static \WPWhales\Hashing\HashManager forgetDrivers()
  *
- * @see \Illuminate\Hashing\HashManager
- * @see \Illuminate\Hashing\AbstractHasher
+ * @see \WPWhales\Hashing\HashManager
+ * @see \WPWhales\Hashing\AbstractHasher
  */
 class Hash extends Facade
 {

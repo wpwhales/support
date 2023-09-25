@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 use BackedEnum;
-use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Contracts\Support\Jsonable;
+use WPWhales\Contracts\Support\Arrayable;
+use WPWhales\Contracts\Support\Htmlable;
+use WPWhales\Contracts\Support\Jsonable;
 use JsonSerializable;
 use Stringable;
 

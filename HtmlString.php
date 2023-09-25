@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
-use Illuminate\Contracts\Support\Htmlable;
+use WPWhales\Contracts\Support\Htmlable;
 use Stringable;
 
 class HtmlString implements Htmlable, Stringable

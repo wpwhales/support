@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Support\Traits;
+namespace WPWhales\Support\Traits;
 
-use Illuminate\Container\Container;
+use WPWhales\Container\Container;
 
 trait Localizable
 {

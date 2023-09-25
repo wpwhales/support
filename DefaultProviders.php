@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 class DefaultProviders
 {
@@ -19,28 +19,28 @@ class DefaultProviders
     public function __construct(?array $providers = null)
     {
         $this->providers = $providers ?: [
-            \Illuminate\Auth\AuthServiceProvider::class,
-            \Illuminate\Broadcasting\BroadcastServiceProvider::class,
-            \Illuminate\Bus\BusServiceProvider::class,
-            \Illuminate\Cache\CacheServiceProvider::class,
-            \Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
-            \Illuminate\Cookie\CookieServiceProvider::class,
-            \Illuminate\Database\DatabaseServiceProvider::class,
-            \Illuminate\Encryption\EncryptionServiceProvider::class,
-            \Illuminate\Filesystem\FilesystemServiceProvider::class,
-            \Illuminate\Foundation\Providers\FoundationServiceProvider::class,
-            \Illuminate\Hashing\HashServiceProvider::class,
-            \Illuminate\Mail\MailServiceProvider::class,
-            \Illuminate\Notifications\NotificationServiceProvider::class,
-            \Illuminate\Pagination\PaginationServiceProvider::class,
-            \Illuminate\Pipeline\PipelineServiceProvider::class,
-            \Illuminate\Queue\QueueServiceProvider::class,
-            \Illuminate\Redis\RedisServiceProvider::class,
-            \Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
-            \Illuminate\Session\SessionServiceProvider::class,
-            \Illuminate\Translation\TranslationServiceProvider::class,
-            \Illuminate\Validation\ValidationServiceProvider::class,
-            \Illuminate\View\ViewServiceProvider::class,
+            \WPWhales\Auth\AuthServiceProvider::class,
+            \WPWhales\Broadcasting\BroadcastServiceProvider::class,
+            \WPWhales\Bus\BusServiceProvider::class,
+            \WPWhales\Cache\CacheServiceProvider::class,
+            \WPWhales\Foundation\Providers\ConsoleSupportServiceProvider::class,
+            \WPWhales\Cookie\CookieServiceProvider::class,
+            \WPWhales\Database\DatabaseServiceProvider::class,
+            \WPWhales\Encryption\EncryptionServiceProvider::class,
+            \WPWhales\Filesystem\FilesystemServiceProvider::class,
+            \WPWhales\Foundation\Providers\FoundationServiceProvider::class,
+            \WPWhales\Hashing\HashServiceProvider::class,
+            \WPWhales\Mail\MailServiceProvider::class,
+            \WPWhales\Notifications\NotificationServiceProvider::class,
+            \WPWhales\Pagination\PaginationServiceProvider::class,
+            \WPWhales\Pipeline\PipelineServiceProvider::class,
+            \WPWhales\Queue\QueueServiceProvider::class,
+            \WPWhales\Redis\RedisServiceProvider::class,
+            \WPWhales\Auth\Passwords\PasswordResetServiceProvider::class,
+            \WPWhales\Session\SessionServiceProvider::class,
+            \WPWhales\Translation\TranslationServiceProvider::class,
+            \WPWhales\Validation\ValidationServiceProvider::class,
+            \WPWhales\View\ViewServiceProvider::class,
         ];
     }
 

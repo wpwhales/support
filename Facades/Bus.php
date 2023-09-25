@@ -1,26 +1,26 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
-use Illuminate\Bus\BatchRepository;
-use Illuminate\Contracts\Bus\Dispatcher as BusDispatcherContract;
-use Illuminate\Foundation\Bus\PendingChain;
-use Illuminate\Support\Testing\Fakes\BusFake;
+use WPWhales\Bus\BatchRepository;
+use WPWhales\Contracts\Bus\Dispatcher as BusDispatcherContract;
+use WPWhales\Foundation\Bus\PendingChain;
+use WPWhales\Support\Testing\Fakes\BusFake;
 
 /**
  * @method static mixed dispatch(mixed $command)
  * @method static mixed dispatchSync(mixed $command, mixed $handler = null)
  * @method static mixed dispatchNow(mixed $command, mixed $handler = null)
- * @method static \Illuminate\Bus\Batch|null findBatch(string $batchId)
- * @method static \Illuminate\Bus\PendingBatch batch(\Illuminate\Support\Collection|array|mixed $jobs)
- * @method static \Illuminate\Foundation\Bus\PendingChain chain(\Illuminate\Support\Collection|array $jobs)
+ * @method static \WPWhales\Bus\Batch|null findBatch(string $batchId)
+ * @method static \WPWhales\Bus\PendingBatch batch(\WPWhales\Support\Collection|array|mixed $jobs)
+ * @method static \WPWhales\Foundation\Bus\PendingChain chain(\WPWhales\Support\Collection|array $jobs)
  * @method static bool hasCommandHandler(mixed $command)
  * @method static bool|mixed getCommandHandler(mixed $command)
  * @method static mixed dispatchToQueue(mixed $command)
  * @method static void dispatchAfterResponse(mixed $command, mixed $handler = null)
- * @method static \Illuminate\Bus\Dispatcher pipeThrough(array $pipes)
- * @method static \Illuminate\Bus\Dispatcher map(array $map)
- * @method static \Illuminate\Support\Testing\Fakes\BusFake except(array|string $jobsToDispatch)
+ * @method static \WPWhales\Bus\Dispatcher pipeThrough(array $pipes)
+ * @method static \WPWhales\Bus\Dispatcher map(array $map)
+ * @method static \WPWhales\Support\Testing\Fakes\BusFake except(array|string $jobsToDispatch)
  * @method static void assertDispatched(string|\Closure $command, callable|int|null $callback = null)
  * @method static void assertDispatchedTimes(string|\Closure $command, int $times = 1)
  * @method static void assertNotDispatched(string|\Closure $command, callable|null $callback = null)
@@ -36,19 +36,19 @@ use Illuminate\Support\Testing\Fakes\BusFake;
  * @method static void assertBatched(callable $callback)
  * @method static void assertBatchCount(int $count)
  * @method static void assertNothingBatched()
- * @method static \Illuminate\Support\Collection dispatched(string $command, callable|null $callback = null)
- * @method static \Illuminate\Support\Collection dispatchedSync(string $command, callable|null $callback = null)
- * @method static \Illuminate\Support\Collection dispatchedAfterResponse(string $command, callable|null $callback = null)
- * @method static \Illuminate\Support\Collection batched(callable $callback)
+ * @method static \WPWhales\Support\Collection dispatched(string $command, callable|null $callback = null)
+ * @method static \WPWhales\Support\Collection dispatchedSync(string $command, callable|null $callback = null)
+ * @method static \WPWhales\Support\Collection dispatchedAfterResponse(string $command, callable|null $callback = null)
+ * @method static \WPWhales\Support\Collection batched(callable $callback)
  * @method static bool hasDispatched(string $command)
  * @method static bool hasDispatchedSync(string $command)
  * @method static bool hasDispatchedAfterResponse(string $command)
- * @method static \Illuminate\Bus\Batch dispatchFakeBatch(string $name = '')
- * @method static \Illuminate\Bus\Batch recordPendingBatch(\Illuminate\Bus\PendingBatch $pendingBatch)
- * @method static \Illuminate\Support\Testing\Fakes\BusFake serializeAndRestore(bool $serializeAndRestore = true)
+ * @method static \WPWhales\Bus\Batch dispatchFakeBatch(string $name = '')
+ * @method static \WPWhales\Bus\Batch recordPendingBatch(\WPWhales\Bus\PendingBatch $pendingBatch)
+ * @method static \WPWhales\Support\Testing\Fakes\BusFake serializeAndRestore(bool $serializeAndRestore = true)
  *
- * @see \Illuminate\Bus\Dispatcher
- * @see \Illuminate\Support\Testing\Fakes\BusFake
+ * @see \WPWhales\Bus\Dispatcher
+ * @see \WPWhales\Support\Testing\Fakes\BusFake
  */
 class Bus extends Facade
 {
@@ -56,8 +56,8 @@ class Bus extends Facade
      * Replace the bound instance with a fake.
      *
      * @param  array|string  $jobsToFake
-     * @param  \Illuminate\Bus\BatchRepository|null  $batchRepository
-     * @return \Illuminate\Support\Testing\Fakes\BusFake
+     * @param  \WPWhales\Bus\BatchRepository|null  $batchRepository
+     * @return \WPWhales\Support\Testing\Fakes\BusFake
      */
     public static function fake($jobsToFake = [], BatchRepository $batchRepository = null)
     {
@@ -74,7 +74,7 @@ class Bus extends Facade
      * Dispatch the given chain of jobs.
      *
      * @param  array|mixed  $jobs
-     * @return \Illuminate\Foundation\Bus\PendingDispatch
+     * @return \WPWhales\Foundation\Bus\PendingDispatch
      */
     public static function dispatchChain($jobs)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace WPWhales\Support\Testing\Fakes;
 
 interface Fake
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
 /**
  * @method static void compile(string|null $path = null)
@@ -8,7 +8,7 @@ namespace Illuminate\Support\Facades;
  * @method static void setPath(string $path)
  * @method static string compileString(string $value)
  * @method static string render(string $string, array $data = [], bool $deleteCachedView = false)
- * @method static string renderComponent(\Illuminate\View\Component $component)
+ * @method static string renderComponent(\WPWhales\View\Component $component)
  * @method static string stripParentheses(string $expression)
  * @method static void extend(callable $compiler)
  * @method static array getExtensions()
@@ -28,7 +28,7 @@ namespace Illuminate\Support\Facades;
  * @method static void aliasInclude(string $path, string|null $alias = null)
  * @method static void directive(string $name, callable $handler)
  * @method static array getCustomDirectives()
- * @method static \Illuminate\View\Compilers\BladeCompiler prepareStringsForCompilationUsing(callable $callback)
+ * @method static \WPWhales\View\Compilers\BladeCompiler prepareStringsForCompilationUsing(callable $callback)
  * @method static void precompiler(callable $precompiler)
  * @method static void setEchoFormat(string $format)
  * @method static void withDoubleEncoding()
@@ -45,7 +45,7 @@ namespace Illuminate\Support\Facades;
  * @method static string compileEchos(string $value)
  * @method static string applyEchoHandler(string $value)
  *
- * @see \Illuminate\View\Compilers\BladeCompiler
+ * @see \WPWhales\View\Compilers\BladeCompiler
  */
 class Blade extends Facade
 {

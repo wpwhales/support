@@ -1,17 +1,17 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace WPWhales\Support\Testing\Fakes;
 
 use Closure;
 use Exception;
-use Illuminate\Contracts\Notifications\Dispatcher as NotificationDispatcher;
-use Illuminate\Contracts\Notifications\Factory as NotificationFactory;
-use Illuminate\Contracts\Translation\HasLocalePreference;
-use Illuminate\Notifications\AnonymousNotifiable;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Str;
-use Illuminate\Support\Traits\Macroable;
-use Illuminate\Support\Traits\ReflectsClosures;
+use WPWhales\Contracts\Notifications\Dispatcher as NotificationDispatcher;
+use WPWhales\Contracts\Notifications\Factory as NotificationFactory;
+use WPWhales\Contracts\Translation\HasLocalePreference;
+use WPWhales\Notifications\AnonymousNotifiable;
+use WPWhales\Support\Collection;
+use WPWhales\Support\Str;
+use WPWhales\Support\Traits\Macroable;
+use WPWhales\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class NotificationFake implements Fake, NotificationDispatcher, NotificationFactory
@@ -227,7 +227,7 @@ class NotificationFake implements Fake, NotificationDispatcher, NotificationFact
      * @param  mixed  $notifiable
      * @param  string  $notification
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public function sent($notifiable, $notification, $callback = null)
     {
@@ -271,7 +271,7 @@ class NotificationFake implements Fake, NotificationDispatcher, NotificationFact
     /**
      * Send the given notification to the given notifiable entities.
      *
-     * @param  \Illuminate\Support\Collection|array|mixed  $notifiables
+     * @param  \WPWhales\Support\Collection|array|mixed  $notifiables
      * @param  mixed  $notification
      * @return void
      */
@@ -283,7 +283,7 @@ class NotificationFake implements Fake, NotificationDispatcher, NotificationFact
     /**
      * Send the given notification immediately.
      *
-     * @param  \Illuminate\Support\Collection|array|mixed  $notifiables
+     * @param  \WPWhales\Support\Collection|array|mixed  $notifiables
      * @param  mixed  $notification
      * @param  array|null  $channels
      * @return void

@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 use Closure;
-use Illuminate\Contracts\Container\Container;
+use WPWhales\Contracts\Container\Container;
 use InvalidArgumentException;
 
 abstract class Manager
@@ -11,14 +11,14 @@ abstract class Manager
     /**
      * The container instance.
      *
-     * @var \Illuminate\Contracts\Container\Container
+     * @var \WPWhales\Contracts\Container\Container
      */
     protected $container;
 
     /**
      * The configuration repository instance.
      *
-     * @var \Illuminate\Contracts\Config\Repository
+     * @var \WPWhales\Contracts\Config\Repository
      */
     protected $config;
 
@@ -39,7 +39,7 @@ abstract class Manager
     /**
      * Create a new manager instance.
      *
-     * @param  \Illuminate\Contracts\Container\Container  $container
+     * @param  \WPWhales\Contracts\Container\Container  $container
      * @return void
      */
     public function __construct(Container $container)
@@ -147,7 +147,7 @@ abstract class Manager
     /**
      * Get the container instance used by the manager.
      *
-     * @return \Illuminate\Contracts\Container\Container
+     * @return \WPWhales\Contracts\Container\Container
      */
     public function getContainer()
     {
@@ -157,7 +157,7 @@ abstract class Manager
     /**
      * Set the container instance used by the manager.
      *
-     * @param  \Illuminate\Contracts\Container\Container  $container
+     * @param  \WPWhales\Contracts\Container\Container  $container
      * @return $this
      */
     public function setContainer(Container $container)

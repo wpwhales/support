@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
 /**
- * @method static \Illuminate\Validation\Validator make(array $data, array $rules, array $messages = [], array $attributes = [])
+ * @method static \WPWhales\Validation\Validator make(array $data, array $rules, array $messages = [], array $attributes = [])
  * @method static array validate(array $data, array $rules, array $messages = [], array $attributes = [])
  * @method static void extend(string $rule, \Closure|string $extension, string|null $message = null)
  * @method static void extendImplicit(string $rule, \Closure|string $extension, string|null $message = null)
@@ -12,13 +12,13 @@ namespace Illuminate\Support\Facades;
  * @method static void includeUnvalidatedArrayKeys()
  * @method static void excludeUnvalidatedArrayKeys()
  * @method static void resolver(\Closure $resolver)
- * @method static \Illuminate\Contracts\Translation\Translator getTranslator()
- * @method static \Illuminate\Validation\PresenceVerifierInterface getPresenceVerifier()
- * @method static void setPresenceVerifier(\Illuminate\Validation\PresenceVerifierInterface $presenceVerifier)
- * @method static \Illuminate\Contracts\Container\Container|null getContainer()
- * @method static \Illuminate\Validation\Factory setContainer(\Illuminate\Contracts\Container\Container $container)
+ * @method static \WPWhales\Contracts\Translation\Translator getTranslator()
+ * @method static \WPWhales\Validation\PresenceVerifierInterface getPresenceVerifier()
+ * @method static void setPresenceVerifier(\WPWhales\Validation\PresenceVerifierInterface $presenceVerifier)
+ * @method static \WPWhales\Contracts\Container\Container|null getContainer()
+ * @method static \WPWhales\Validation\Factory setContainer(\WPWhales\Contracts\Container\Container $container)
  *
- * @see \Illuminate\Validation\Factory
+ * @see \WPWhales\Validation\Factory
  */
 class Validator extends Facade
 {

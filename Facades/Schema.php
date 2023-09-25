@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
 /**
  * @method static void defaultStringLength(int $length)
@@ -30,11 +30,11 @@ namespace Illuminate\Support\Facades;
  * @method static bool enableForeignKeyConstraints()
  * @method static bool disableForeignKeyConstraints()
  * @method static mixed withoutForeignKeyConstraints(\Closure $callback)
- * @method static \Illuminate\Database\Connection getConnection()
- * @method static \Illuminate\Database\Schema\Builder setConnection(\Illuminate\Database\Connection $connection)
+ * @method static \WPWhales\Database\Connection getConnection()
+ * @method static \WPWhales\Database\Schema\Builder setConnection(\WPWhales\Database\Connection $connection)
  * @method static void blueprintResolver(\Closure $resolver)
  *
- * @see \Illuminate\Database\Schema\Builder
+ * @see \WPWhales\Database\Schema\Builder
  */
 class Schema extends Facade
 {
@@ -49,7 +49,7 @@ class Schema extends Facade
      * Get a schema builder instance for a connection.
      *
      * @param  string|null  $name
-     * @return \Illuminate\Database\Schema\Builder
+     * @return \WPWhales\Database\Schema\Builder
      */
     public static function connection($name)
     {

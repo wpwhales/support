@@ -1,14 +1,14 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace WPWhales\Support\Testing\Fakes;
 
 use BadMethodCallException;
 use Closure;
-use Illuminate\Contracts\Queue\Queue;
-use Illuminate\Queue\CallQueuedClosure;
-use Illuminate\Queue\QueueManager;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Traits\ReflectsClosures;
+use WPWhales\Contracts\Queue\Queue;
+use WPWhales\Queue\CallQueuedClosure;
+use WPWhales\Queue\QueueManager;
+use WPWhales\Support\Collection;
+use WPWhales\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class QueueFake extends QueueManager implements Fake, Queue
@@ -18,21 +18,21 @@ class QueueFake extends QueueManager implements Fake, Queue
     /**
      * The original queue manager.
      *
-     * @var \Illuminate\Contracts\Queue\Queue
+     * @var \WPWhales\Contracts\Queue\Queue
      */
     public $queue;
 
     /**
      * The job types that should be intercepted instead of pushed to the queue.
      *
-     * @var \Illuminate\Support\Collection
+     * @var \WPWhales\Support\Collection
      */
     protected $jobsToFake;
 
     /**
      * The job types that should be pushed to the queue and not intercepted.
      *
-     * @var \Illuminate\Support\Collection
+     * @var \WPWhales\Support\Collection
      */
     protected $jobsToBeQueued;
 
@@ -53,9 +53,9 @@ class QueueFake extends QueueManager implements Fake, Queue
     /**
      * Create a new fake queue instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \WPWhales\Contracts\Foundation\Application  $app
      * @param  array  $jobsToFake
-     * @param  \Illuminate\Queue\QueueManager|null  $queue
+     * @param  \WPWhales\Queue\QueueManager|null  $queue
      * @return void
      */
     public function __construct($app, $jobsToFake = [], $queue = null)
@@ -293,7 +293,7 @@ class QueueFake extends QueueManager implements Fake, Queue
      *
      * @param  string  $job
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public function pushed($job, $callback = null)
     {
@@ -323,7 +323,7 @@ class QueueFake extends QueueManager implements Fake, Queue
      * Resolve a queue connection instance.
      *
      * @param  mixed  $value
-     * @return \Illuminate\Contracts\Queue\Queue
+     * @return \WPWhales\Contracts\Queue\Queue
      */
     public function connection($value = null)
     {
@@ -466,7 +466,7 @@ class QueueFake extends QueueManager implements Fake, Queue
      * Pop the next job off of the queue.
      *
      * @param  string|null  $queue
-     * @return \Illuminate\Contracts\Queue\Job|null
+     * @return \WPWhales\Contracts\Queue\Job|null
      */
     public function pop($queue = null)
     {

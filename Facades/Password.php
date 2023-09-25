@@ -1,23 +1,23 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
-use Illuminate\Contracts\Auth\PasswordBroker;
+use WPWhales\Contracts\Auth\PasswordBroker;
 
 /**
- * @method static \Illuminate\Contracts\Auth\PasswordBroker broker(string|null $name = null)
+ * @method static \WPWhales\Contracts\Auth\PasswordBroker broker(string|null $name = null)
  * @method static string getDefaultDriver()
  * @method static void setDefaultDriver(string $name)
  * @method static string sendResetLink(array $credentials, \Closure|null $callback = null)
  * @method static mixed reset(array $credentials, \Closure $callback)
- * @method static \Illuminate\Contracts\Auth\CanResetPassword|null getUser(array $credentials)
- * @method static string createToken(\Illuminate\Contracts\Auth\CanResetPassword $user)
- * @method static void deleteToken(\Illuminate\Contracts\Auth\CanResetPassword $user)
- * @method static bool tokenExists(\Illuminate\Contracts\Auth\CanResetPassword $user, string $token)
- * @method static \Illuminate\Auth\Passwords\TokenRepositoryInterface getRepository()
+ * @method static \WPWhales\Contracts\Auth\CanResetPassword|null getUser(array $credentials)
+ * @method static string createToken(\WPWhales\Contracts\Auth\CanResetPassword $user)
+ * @method static void deleteToken(\WPWhales\Contracts\Auth\CanResetPassword $user)
+ * @method static bool tokenExists(\WPWhales\Contracts\Auth\CanResetPassword $user, string $token)
+ * @method static \WPWhales\Auth\Passwords\TokenRepositoryInterface getRepository()
  *
- * @see \Illuminate\Auth\Passwords\PasswordBrokerManager
- * @see \Illuminate\Auth\Passwords\PasswordBroker
+ * @see \WPWhales\Auth\Passwords\PasswordBrokerManager
+ * @see \WPWhales\Auth\Passwords\PasswordBroker
  */
 class Password extends Facade
 {

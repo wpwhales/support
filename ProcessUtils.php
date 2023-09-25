@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 /**
  * ProcessUtils is a bunch of utility methods.

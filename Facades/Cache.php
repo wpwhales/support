@@ -1,19 +1,19 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
 /**
- * @method static \Illuminate\Contracts\Cache\Repository store(string|null $name = null)
- * @method static \Illuminate\Contracts\Cache\Repository driver(string|null $driver = null)
- * @method static \Illuminate\Contracts\Cache\Repository resolve(string $name)
- * @method static \Illuminate\Cache\Repository repository(\Illuminate\Contracts\Cache\Store $store)
+ * @method static \WPWhales\Contracts\Cache\Repository store(string|null $name = null)
+ * @method static \WPWhales\Contracts\Cache\Repository driver(string|null $driver = null)
+ * @method static \WPWhales\Contracts\Cache\Repository resolve(string $name)
+ * @method static \WPWhales\Cache\Repository repository(\WPWhales\Contracts\Cache\Store $store)
  * @method static void refreshEventDispatcher()
  * @method static string getDefaultDriver()
  * @method static void setDefaultDriver(string $name)
- * @method static \Illuminate\Cache\CacheManager forgetDriver(array|string|null $name = null)
+ * @method static \WPWhales\Cache\CacheManager forgetDriver(array|string|null $name = null)
  * @method static void purge(string|null $name = null)
- * @method static \Illuminate\Cache\CacheManager extend(string $driver, \Closure $callback)
- * @method static \Illuminate\Cache\CacheManager setApplication(\Illuminate\Contracts\Foundation\Application $app)
+ * @method static \WPWhales\Cache\CacheManager extend(string $driver, \Closure $callback)
+ * @method static \WPWhales\Cache\CacheManager setApplication(\WPWhales\Contracts\Foundation\Application $app)
  * @method static bool has(array|string $key)
  * @method static bool missing(string $key)
  * @method static mixed get(array|string $key, mixed|\Closure $default = null)
@@ -35,14 +35,14 @@ namespace Illuminate\Support\Facades;
  * @method static bool delete(string $key)
  * @method static bool deleteMultiple(iterable $keys)
  * @method static bool clear()
- * @method static \Illuminate\Cache\TaggedCache tags(array|mixed $names)
+ * @method static \WPWhales\Cache\TaggedCache tags(array|mixed $names)
  * @method static bool supportsTags()
  * @method static int|null getDefaultCacheTime()
- * @method static \Illuminate\Cache\Repository setDefaultCacheTime(int|null $seconds)
- * @method static \Illuminate\Contracts\Cache\Store getStore()
- * @method static \Illuminate\Cache\Repository setStore(\Illuminate\Contracts\Cache\Store $store)
- * @method static \Illuminate\Contracts\Events\Dispatcher getEventDispatcher()
- * @method static void setEventDispatcher(\Illuminate\Contracts\Events\Dispatcher $events)
+ * @method static \WPWhales\Cache\Repository setDefaultCacheTime(int|null $seconds)
+ * @method static \WPWhales\Contracts\Cache\Store getStore()
+ * @method static \WPWhales\Cache\Repository setStore(\WPWhales\Contracts\Cache\Store $store)
+ * @method static \WPWhales\Contracts\Events\Dispatcher getEventDispatcher()
+ * @method static void setEventDispatcher(\WPWhales\Contracts\Events\Dispatcher $events)
  * @method static void macro(string $name, object|callable $macro)
  * @method static void mixin(object $mixin, bool $replace = true)
  * @method static bool hasMacro(string $name)
@@ -50,12 +50,12 @@ namespace Illuminate\Support\Facades;
  * @method static mixed macroCall(string $method, array $parameters)
  * @method static bool flush()
  * @method static string getPrefix()
- * @method static \Illuminate\Contracts\Cache\Lock lock(string $name, int $seconds = 0, string|null $owner = null)
- * @method static \Illuminate\Contracts\Cache\Lock restoreLock(string $name, string $owner)
+ * @method static \WPWhales\Contracts\Cache\Lock lock(string $name, int $seconds = 0, string|null $owner = null)
+ * @method static \WPWhales\Contracts\Cache\Lock restoreLock(string $name, string $owner)
  *
- * @see \Illuminate\Cache\CacheManager
+ * @see \WPWhales\Cache\CacheManager
  *
- * @mixin \Illuminate\Cache\Repository
+ * @mixin \WPWhales\Cache\Repository
  */
 class Cache extends Facade
 {

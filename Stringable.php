@@ -1,14 +1,14 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 use ArrayAccess;
 use Closure;
-use Illuminate\Support\Facades\Date;
-use Illuminate\Support\Traits\Conditionable;
-use Illuminate\Support\Traits\Dumpable;
-use Illuminate\Support\Traits\Macroable;
-use Illuminate\Support\Traits\Tappable;
+use WPWhales\Support\Facades\Date;
+use WPWhales\Support\Traits\Conditionable;
+use WPWhales\Support\Traits\Dumpable;
+use WPWhales\Support\Traits\Macroable;
+use WPWhales\Support\Traits\Tappable;
 use JsonSerializable;
 use Stringable as BaseStringable;
 
@@ -226,7 +226,7 @@ class Stringable implements JsonSerializable, ArrayAccess, BaseStringable
     /**
      * Determine if the string is an exact match with the given value.
      *
-     * @param  \Illuminate\Support\Stringable|string  $value
+     * @param  \WPWhales\Support\Stringable|string  $value
      * @return bool
      */
     public function exactly($value)
@@ -255,7 +255,7 @@ class Stringable implements JsonSerializable, ArrayAccess, BaseStringable
      *
      * @param  string  $delimiter
      * @param  int  $limit
-     * @return \Illuminate\Support\Collection<int, string>
+     * @return \WPWhales\Support\Collection<int, string>
      */
     public function explode($delimiter, $limit = PHP_INT_MAX)
     {
@@ -268,7 +268,7 @@ class Stringable implements JsonSerializable, ArrayAccess, BaseStringable
      * @param  string|int  $pattern
      * @param  int  $limit
      * @param  int  $flags
-     * @return \Illuminate\Support\Collection<int, string>
+     * @return \WPWhales\Support\Collection<int, string>
      */
     public function split($pattern, $limit = -1, $flags = 0)
     {
@@ -478,7 +478,7 @@ class Stringable implements JsonSerializable, ArrayAccess, BaseStringable
      * Get the string matching the given pattern.
      *
      * @param  string  $pattern
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public function matchAll($pattern)
     {
@@ -724,7 +724,7 @@ class Stringable implements JsonSerializable, ArrayAccess, BaseStringable
      * Parse input from a string to a collection, according to a format.
      *
      * @param  string  $format
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public function scan($format)
     {
@@ -954,7 +954,7 @@ class Stringable implements JsonSerializable, ArrayAccess, BaseStringable
     /**
      * Split a string by uppercase characters.
      *
-     * @return \Illuminate\Support\Collection<int, string>
+     * @return \WPWhales\Support\Collection<int, string>
      */
     public function ucsplit()
     {
@@ -1176,7 +1176,7 @@ class Stringable implements JsonSerializable, ArrayAccess, BaseStringable
     /**
      * Convert the string into a `HtmlString` instance.
      *
-     * @return \Illuminate\Support\HtmlString
+     * @return \WPWhales\Support\HtmlString
      */
     public function toHtmlString()
     {
@@ -1253,7 +1253,7 @@ class Stringable implements JsonSerializable, ArrayAccess, BaseStringable
      *
      * @param  string|null  $format
      * @param  string|null  $tz
-     * @return \Illuminate\Support\Carbon
+     * @return \WPWhales\Support\Carbon
      *
      * @throws \Carbon\Exceptions\InvalidFormatException
      */

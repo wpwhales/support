@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 use Closure;
 use InvalidArgumentException;
@@ -11,7 +11,7 @@ abstract class MultipleInstanceManager
     /**
      * The application instance.
      *
-     * @var \Illuminate\Contracts\Foundation\Application
+     * @var \WPWhales\Contracts\Foundation\Application
      */
     protected $app;
 
@@ -32,7 +32,7 @@ abstract class MultipleInstanceManager
     /**
      * Create a new manager instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \WPWhales\Contracts\Foundation\Application  $app
      * @return void
      */
     public function __construct($app)

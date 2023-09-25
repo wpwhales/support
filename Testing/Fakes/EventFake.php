@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace WPWhales\Support\Testing\Fakes;
 
 use Closure;
-use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
-use Illuminate\Support\Traits\ForwardsCalls;
-use Illuminate\Support\Traits\ReflectsClosures;
+use WPWhales\Contracts\Events\Dispatcher;
+use WPWhales\Support\Arr;
+use WPWhales\Support\Str;
+use WPWhales\Support\Traits\ForwardsCalls;
+use WPWhales\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 use ReflectionFunction;
 
@@ -18,7 +18,7 @@ class EventFake implements Dispatcher, Fake
     /**
      * The original event dispatcher.
      *
-     * @var \Illuminate\Contracts\Events\Dispatcher
+     * @var \WPWhales\Contracts\Events\Dispatcher
      */
     public $dispatcher;
 
@@ -46,7 +46,7 @@ class EventFake implements Dispatcher, Fake
     /**
      * Create a new event fake instance.
      *
-     * @param  \Illuminate\Contracts\Events\Dispatcher  $dispatcher
+     * @param  \WPWhales\Contracts\Events\Dispatcher  $dispatcher
      * @param  array|string  $eventsToFake
      * @return void
      */
@@ -201,7 +201,7 @@ class EventFake implements Dispatcher, Fake
      *
      * @param  string  $event
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public function dispatched($event, $callback = null)
     {

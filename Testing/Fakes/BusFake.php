@@ -1,14 +1,14 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace WPWhales\Support\Testing\Fakes;
 
 use Closure;
-use Illuminate\Bus\BatchRepository;
-use Illuminate\Bus\PendingBatch;
-use Illuminate\Contracts\Bus\QueueingDispatcher;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Traits\ReflectsClosures;
+use WPWhales\Bus\BatchRepository;
+use WPWhales\Bus\PendingBatch;
+use WPWhales\Contracts\Bus\QueueingDispatcher;
+use WPWhales\Support\Arr;
+use WPWhales\Support\Collection;
+use WPWhales\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class BusFake implements Fake, QueueingDispatcher
@@ -18,7 +18,7 @@ class BusFake implements Fake, QueueingDispatcher
     /**
      * The original Bus dispatcher implementation.
      *
-     * @var \Illuminate\Contracts\Bus\QueueingDispatcher
+     * @var \WPWhales\Contracts\Bus\QueueingDispatcher
      */
     public $dispatcher;
 
@@ -39,7 +39,7 @@ class BusFake implements Fake, QueueingDispatcher
     /**
      * The fake repository to track batched jobs.
      *
-     * @var \Illuminate\Bus\BatchRepository
+     * @var \WPWhales\Bus\BatchRepository
      */
     protected $batchRepository;
 
@@ -81,9 +81,9 @@ class BusFake implements Fake, QueueingDispatcher
     /**
      * Create a new bus fake instance.
      *
-     * @param  \Illuminate\Contracts\Bus\QueueingDispatcher  $dispatcher
+     * @param  \WPWhales\Contracts\Bus\QueueingDispatcher  $dispatcher
      * @param  array|string  $jobsToFake
-     * @param  \Illuminate\Bus\BatchRepository|null  $batchRepository
+     * @param  \WPWhales\Bus\BatchRepository|null  $batchRepository
      * @return void
      */
     public function __construct(QueueingDispatcher $dispatcher, $jobsToFake = [], BatchRepository $batchRepository = null)
@@ -486,7 +486,7 @@ class BusFake implements Fake, QueueingDispatcher
      *
      * @param  string  $command
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public function dispatched($command, $callback = null)
     {
@@ -504,7 +504,7 @@ class BusFake implements Fake, QueueingDispatcher
      *
      * @param  string  $command
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public function dispatchedSync(string $command, $callback = null)
     {
@@ -522,7 +522,7 @@ class BusFake implements Fake, QueueingDispatcher
      *
      * @param  string  $command
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public function dispatchedAfterResponse(string $command, $callback = null)
     {
@@ -539,7 +539,7 @@ class BusFake implements Fake, QueueingDispatcher
      * Get all of the pending batches matching a truth-test callback.
      *
      * @param  callable  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public function batched(callable $callback)
     {
@@ -665,8 +665,8 @@ class BusFake implements Fake, QueueingDispatcher
     /**
      * Create a new chain of queueable jobs.
      *
-     * @param  \Illuminate\Support\Collection|array  $jobs
-     * @return \Illuminate\Foundation\Bus\PendingChain
+     * @param  \WPWhales\Support\Collection|array  $jobs
+     * @return \WPWhales\Foundation\Bus\PendingChain
      */
     public function chain($jobs)
     {
@@ -679,7 +679,7 @@ class BusFake implements Fake, QueueingDispatcher
      * Attempt to find the batch with the given ID.
      *
      * @param  string  $batchId
-     * @return \Illuminate\Bus\Batch|null
+     * @return \WPWhales\Bus\Batch|null
      */
     public function findBatch(string $batchId)
     {
@@ -689,8 +689,8 @@ class BusFake implements Fake, QueueingDispatcher
     /**
      * Create a new batch of queueable jobs.
      *
-     * @param  \Illuminate\Support\Collection|array  $jobs
-     * @return \Illuminate\Bus\PendingBatch
+     * @param  \WPWhales\Support\Collection|array  $jobs
+     * @return \WPWhales\Bus\PendingBatch
      */
     public function batch($jobs)
     {
@@ -701,7 +701,7 @@ class BusFake implements Fake, QueueingDispatcher
      * Dispatch an empty job batch for testing.
      *
      * @param  string  $name
-     * @return \Illuminate\Bus\Batch
+     * @return \WPWhales\Bus\Batch
      */
     public function dispatchFakeBatch($name = '')
     {
@@ -711,8 +711,8 @@ class BusFake implements Fake, QueueingDispatcher
     /**
      * Record the fake pending batch dispatch.
      *
-     * @param  \Illuminate\Bus\PendingBatch  $pendingBatch
-     * @return \Illuminate\Bus\Batch
+     * @param  \WPWhales\Bus\PendingBatch  $pendingBatch
+     * @return \WPWhales\Bus\Batch
      */
     public function recordPendingBatch(PendingBatch $pendingBatch)
     {

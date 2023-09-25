@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
 use Closure;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Js;
-use Illuminate\Support\Str;
-use Illuminate\Support\Testing\Fakes\Fake;
+use WPWhales\Database\Eloquent\Model;
+use WPWhales\Support\Arr;
+use WPWhales\Support\Js;
+use WPWhales\Support\Str;
+use WPWhales\Support\Testing\Fakes\Fake;
 use Mockery;
 use Mockery\LegacyMockInterface;
 use RuntimeException;
@@ -17,7 +17,7 @@ abstract class Facade
     /**
      * The application instance being facaded.
      *
-     * @var \Illuminate\Contracts\Foundation\Application
+     * @var \WPWhales\Contracts\Foundation\Application
      */
     protected static $app;
 
@@ -264,7 +264,7 @@ abstract class Facade
     /**
      * Get the application default aliases.
      *
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public static function defaultAliases()
     {
@@ -315,7 +315,7 @@ abstract class Facade
     /**
      * Get the application instance behind the facade.
      *
-     * @return \Illuminate\Contracts\Foundation\Application
+     * @return \WPWhales\Contracts\Foundation\Application
      */
     public static function getFacadeApplication()
     {
@@ -325,7 +325,7 @@ abstract class Facade
     /**
      * Set the application instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \WPWhales\Contracts\Foundation\Application  $app
      * @return void
      */
     public static function setFacadeApplication($app)

@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 use ArrayAccess;
 use ArrayObject;
-use Illuminate\Support\Traits\Macroable;
+use WPWhales\Support\Traits\Macroable;
 
 class Optional implements ArrayAccess
 {

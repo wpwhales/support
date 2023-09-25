@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Traits;
+namespace WPWhales\Support\Traits;
 
 use Closure;
-use Illuminate\Support\Reflector;
+use WPWhales\Support\Reflector;
 use ReflectionFunction;
 use RuntimeException;
 

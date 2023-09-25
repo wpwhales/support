@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 use Countable;
-use Illuminate\Contracts\Support\MessageBag as MessageBagContract;
+use WPWhales\Contracts\Support\MessageBag as MessageBagContract;
 use Stringable;
 
 /**
- * @mixin \Illuminate\Contracts\Support\MessageBag
+ * @mixin \WPWhales\Contracts\Support\MessageBag
  */
 class ViewErrorBag implements Countable, Stringable
 {
@@ -33,7 +33,7 @@ class ViewErrorBag implements Countable, Stringable
      * Get a MessageBag instance from the bags.
      *
      * @param  string  $key
-     * @return \Illuminate\Contracts\Support\MessageBag
+     * @return \WPWhales\Contracts\Support\MessageBag
      */
     public function getBag($key)
     {
@@ -54,7 +54,7 @@ class ViewErrorBag implements Countable, Stringable
      * Add a new MessageBag instance to the bags.
      *
      * @param  string  $key
-     * @param  \Illuminate\Contracts\Support\MessageBag  $bag
+     * @param  \WPWhales\Contracts\Support\MessageBag  $bag
      * @return $this
      */
     public function put($key, MessageBagContract $bag)
@@ -100,7 +100,7 @@ class ViewErrorBag implements Countable, Stringable
      * Dynamically access a view error bag.
      *
      * @param  string  $key
-     * @return \Illuminate\Contracts\Support\MessageBag
+     * @return \WPWhales\Contracts\Support\MessageBag
      */
     public function __get($key)
     {
@@ -111,7 +111,7 @@ class ViewErrorBag implements Countable, Stringable
      * Dynamically set a view error bag.
      *
      * @param  string  $key
-     * @param  \Illuminate\Contracts\Support\MessageBag  $value
+     * @param  \WPWhales\Contracts\Support\MessageBag  $value
      * @return void
      */
     public function __set($key, $value)

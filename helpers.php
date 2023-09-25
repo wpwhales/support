@@ -1,13 +1,13 @@
 <?php
 
-use Illuminate\Contracts\Support\DeferringDisplayableValue;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Env;
-use Illuminate\Support\HigherOrderTapProxy;
-use Illuminate\Support\Optional;
-use Illuminate\Support\Sleep;
-use Illuminate\Support\Str;
+use WPWhales\Contracts\Support\DeferringDisplayableValue;
+use WPWhales\Contracts\Support\Htmlable;
+use WPWhales\Support\Arr;
+use WPWhales\Support\Env;
+use WPWhales\Support\HigherOrderTapProxy;
+use WPWhales\Support\Optional;
+use WPWhales\Support\Sleep;
+use WPWhales\Support\Str;
 
 if (! function_exists('append_config')) {
     /**
@@ -103,7 +103,7 @@ if (! function_exists('e')) {
     /**
      * Encode HTML special characters in a string.
      *
-     * @param  \Illuminate\Contracts\Support\DeferringDisplayableValue|\Illuminate\Contracts\Support\Htmlable|\BackedEnum|string|null  $value
+     * @param  \WPWhales\Contracts\Support\DeferringDisplayableValue|\WPWhales\Contracts\Support\Htmlable|\BackedEnum|string|null  $value
      * @param  bool  $doubleEncode
      * @return string
      */
@@ -267,7 +267,7 @@ if (! function_exists('str')) {
      * Get a new stringable object from the given string.
      *
      * @param  string|null  $string
-     * @return \Illuminate\Support\Stringable|mixed
+     * @return \WPWhales\Support\Stringable|mixed
      */
     function str($string = null)
     {

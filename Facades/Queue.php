@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
-use Illuminate\Queue\Worker;
-use Illuminate\Support\Testing\Fakes\QueueFake;
+use WPWhales\Queue\Worker;
+use WPWhales\Support\Testing\Fakes\QueueFake;
 
 /**
  * @method static void before(mixed $callback)
@@ -13,14 +13,14 @@ use Illuminate\Support\Testing\Fakes\QueueFake;
  * @method static void failing(mixed $callback)
  * @method static void stopping(mixed $callback)
  * @method static bool connected(string|null $name = null)
- * @method static \Illuminate\Contracts\Queue\Queue connection(string|null $name = null)
+ * @method static \WPWhales\Contracts\Queue\Queue connection(string|null $name = null)
  * @method static void extend(string $driver, \Closure $resolver)
  * @method static void addConnector(string $driver, \Closure $resolver)
  * @method static string getDefaultDriver()
  * @method static void setDefaultDriver(string $name)
  * @method static string getName(string|null $connection = null)
- * @method static \Illuminate\Contracts\Foundation\Application getApplication()
- * @method static \Illuminate\Queue\QueueManager setApplication(\Illuminate\Contracts\Foundation\Application $app)
+ * @method static \WPWhales\Contracts\Foundation\Application getApplication()
+ * @method static \WPWhales\Queue\QueueManager setApplication(\WPWhales\Contracts\Foundation\Application $app)
  * @method static int size(string|null $queue = null)
  * @method static mixed push(string|object $job, mixed $data = '', string|null $queue = null)
  * @method static mixed pushOn(string $queue, string|object $job, mixed $data = '')
@@ -28,15 +28,15 @@ use Illuminate\Support\Testing\Fakes\QueueFake;
  * @method static mixed later(\DateTimeInterface|\DateInterval|int $delay, string|object $job, mixed $data = '', string|null $queue = null)
  * @method static mixed laterOn(string $queue, \DateTimeInterface|\DateInterval|int $delay, string|object $job, mixed $data = '')
  * @method static mixed bulk(array $jobs, mixed $data = '', string|null $queue = null)
- * @method static \Illuminate\Contracts\Queue\Job|null pop(string|null $queue = null)
+ * @method static \WPWhales\Contracts\Queue\Job|null pop(string|null $queue = null)
  * @method static string getConnectionName()
- * @method static \Illuminate\Contracts\Queue\Queue setConnectionName(string $name)
+ * @method static \WPWhales\Contracts\Queue\Queue setConnectionName(string $name)
  * @method static mixed getJobBackoff(mixed $job)
  * @method static mixed getJobExpiration(mixed $job)
  * @method static void createPayloadUsing(callable|null $callback)
- * @method static \Illuminate\Container\Container getContainer()
- * @method static void setContainer(\Illuminate\Container\Container $container)
- * @method static \Illuminate\Support\Testing\Fakes\QueueFake except(array|string $jobsToBeQueued)
+ * @method static \WPWhales\Container\Container getContainer()
+ * @method static void setContainer(\WPWhales\Container\Container $container)
+ * @method static \WPWhales\Support\Testing\Fakes\QueueFake except(array|string $jobsToBeQueued)
  * @method static void assertPushed(string|\Closure $job, callable|int|null $callback = null)
  * @method static void assertPushedOn(string $queue, string|\Closure $job, callable|null $callback = null)
  * @method static void assertPushedWithChain(string $job, array $expectedChain = [], callable|null $callback = null)
@@ -45,15 +45,15 @@ use Illuminate\Support\Testing\Fakes\QueueFake;
  * @method static void assertClosureNotPushed(callable|null $callback = null)
  * @method static void assertNotPushed(string|\Closure $job, callable|null $callback = null)
  * @method static void assertNothingPushed()
- * @method static \Illuminate\Support\Collection pushed(string $job, callable|null $callback = null)
+ * @method static \WPWhales\Support\Collection pushed(string $job, callable|null $callback = null)
  * @method static bool hasPushed(string $job)
  * @method static bool shouldFakeJob(object $job)
  * @method static array pushedJobs()
- * @method static \Illuminate\Support\Testing\Fakes\QueueFake serializeAndRestore(bool $serializeAndRestore = true)
+ * @method static \WPWhales\Support\Testing\Fakes\QueueFake serializeAndRestore(bool $serializeAndRestore = true)
  *
- * @see \Illuminate\Queue\QueueManager
- * @see \Illuminate\Queue\Queue
- * @see \Illuminate\Support\Testing\Fakes\QueueFake
+ * @see \WPWhales\Queue\QueueManager
+ * @see \WPWhales\Queue\Queue
+ * @see \WPWhales\Support\Testing\Fakes\QueueFake
  */
 class Queue extends Facade
 {
@@ -73,7 +73,7 @@ class Queue extends Facade
      * Replace the bound instance with a fake.
      *
      * @param  array|string  $jobsToFake
-     * @return \Illuminate\Support\Testing\Fakes\QueueFake
+     * @return \WPWhales\Support\Testing\Fakes\QueueFake
      */
     public static function fake($jobsToFake = [])
     {

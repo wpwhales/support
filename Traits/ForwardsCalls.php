@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support\Traits;
+namespace WPWhales\Support\Traits;
 
 use BadMethodCallException;
 use Error;

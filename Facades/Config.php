@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
 /**
  * @method static bool has(string $key)
@@ -15,7 +15,7 @@ namespace Illuminate\Support\Facades;
  * @method static bool hasMacro(string $name)
  * @method static void flushMacros()
  *
- * @see \Illuminate\Config\Repository
+ * @see \WPWhales\Config\Repository
  */
 class Config extends Facade
 {

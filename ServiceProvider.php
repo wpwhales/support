@@ -1,21 +1,21 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 use Closure;
-use Illuminate\Console\Application as Artisan;
-use Illuminate\Contracts\Foundation\CachesConfiguration;
-use Illuminate\Contracts\Foundation\CachesRoutes;
-use Illuminate\Contracts\Support\DeferrableProvider;
-use Illuminate\Database\Eloquent\Factory as ModelFactory;
-use Illuminate\View\Compilers\BladeCompiler;
+use WPWhales\Console\Application as Artisan;
+use WPWhales\Contracts\Foundation\CachesConfiguration;
+use WPWhales\Contracts\Foundation\CachesRoutes;
+use WPWhales\Contracts\Support\DeferrableProvider;
+use WPWhales\Database\Eloquent\Factory as ModelFactory;
+use WPWhales\View\Compilers\BladeCompiler;
 
 abstract class ServiceProvider
 {
     /**
      * The application instance.
      *
-     * @var \Illuminate\Contracts\Foundation\Application
+     * @var \WPWhales\Contracts\Foundation\Application
      */
     protected $app;
 
@@ -50,7 +50,7 @@ abstract class ServiceProvider
     /**
      * Create a new service provider instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application  $app
+     * @param  \WPWhales\Contracts\Foundation\Application  $app
      * @return void
      */
     public function __construct($app)
@@ -438,7 +438,7 @@ abstract class ServiceProvider
     /**
      * Get the default providers for a Laravel application.
      *
-     * @return \Illuminate\Support\DefaultProviders
+     * @return \WPWhales\Support\DefaultProviders
      */
     public static function defaultProviders()
     {

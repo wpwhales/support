@@ -1,17 +1,17 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
 /**
- * @method static \Illuminate\Pipeline\Pipeline send(mixed $passable)
- * @method static \Illuminate\Pipeline\Pipeline through(array|mixed $pipes)
- * @method static \Illuminate\Pipeline\Pipeline pipe(array|mixed $pipes)
- * @method static \Illuminate\Pipeline\Pipeline via(string $method)
+ * @method static \WPWhales\Pipeline\Pipeline send(mixed $passable)
+ * @method static \WPWhales\Pipeline\Pipeline through(array|mixed $pipes)
+ * @method static \WPWhales\Pipeline\Pipeline pipe(array|mixed $pipes)
+ * @method static \WPWhales\Pipeline\Pipeline via(string $method)
  * @method static mixed then(\Closure $destination)
  * @method static mixed thenReturn()
- * @method static \Illuminate\Pipeline\Pipeline setContainer(\Illuminate\Contracts\Container\Container $container)
+ * @method static \WPWhales\Pipeline\Pipeline setContainer(\WPWhales\Contracts\Container\Container $container)
  *
- * @see \Illuminate\Pipeline\Pipeline
+ * @see \WPWhales\Pipeline\Pipeline
  */
 class Pipeline extends Facade
 {

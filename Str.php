@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 use Closure;
-use Illuminate\Support\Traits\Macroable;
+use WPWhales\Support\Traits\Macroable;
 use JsonException;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Extension\GithubFlavoredMarkdownExtension;
@@ -68,7 +68,7 @@ class Str
      * Get a new stringable object from the given string.
      *
      * @param  string  $string
-     * @return \Illuminate\Support\Stringable
+     * @return \WPWhales\Support\Stringable
      */
     public static function of($string)
     {
@@ -726,7 +726,7 @@ class Str
      *
      * @param  string  $pattern
      * @param  string  $subject
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public static function matchAll($pattern, $subject)
     {

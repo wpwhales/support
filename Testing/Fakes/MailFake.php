@@ -1,16 +1,16 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace WPWhales\Support\Testing\Fakes;
 
 use Closure;
-use Illuminate\Contracts\Mail\Factory;
-use Illuminate\Contracts\Mail\Mailable;
-use Illuminate\Contracts\Mail\Mailer;
-use Illuminate\Contracts\Mail\MailQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Mail\MailManager;
-use Illuminate\Support\Traits\ForwardsCalls;
-use Illuminate\Support\Traits\ReflectsClosures;
+use WPWhales\Contracts\Mail\Factory;
+use WPWhales\Contracts\Mail\Mailable;
+use WPWhales\Contracts\Mail\Mailer;
+use WPWhales\Contracts\Mail\MailQueue;
+use WPWhales\Contracts\Queue\ShouldQueue;
+use WPWhales\Mail\MailManager;
+use WPWhales\Support\Traits\ForwardsCalls;
+use WPWhales\Support\Traits\ReflectsClosures;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class MailFake implements Factory, Fake, Mailer, MailQueue
@@ -279,7 +279,7 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
      *
      * @param  string|\Closure  $mailable
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public function sent($mailable, $callback = null)
     {
@@ -310,7 +310,7 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
      *
      * @param  string|\Closure  $mailable
      * @param  callable|null  $callback
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public function queued($mailable, $callback = null)
     {
@@ -340,7 +340,7 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
      * Get all of the mailed mailables for a given type.
      *
      * @param  string  $type
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     protected function mailablesOf($type)
     {
@@ -351,7 +351,7 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
      * Get all of the mailed mailables for a given type.
      *
      * @param  string  $type
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     protected function queuedMailablesOf($type)
     {
@@ -362,7 +362,7 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
      * Get a mailer instance by name.
      *
      * @param  string|null  $name
-     * @return \Illuminate\Contracts\Mail\Mailer
+     * @return \WPWhales\Contracts\Mail\Mailer
      */
     public function mailer($name = null)
     {
@@ -375,7 +375,7 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
      * Begin the process of mailing a mailable class instance.
      *
      * @param  mixed  $users
-     * @return \Illuminate\Mail\PendingMail
+     * @return \WPWhales\Mail\PendingMail
      */
     public function to($users)
     {
@@ -386,7 +386,7 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
      * Begin the process of mailing a mailable class instance.
      *
      * @param  mixed  $users
-     * @return \Illuminate\Mail\PendingMail
+     * @return \WPWhales\Mail\PendingMail
      */
     public function cc($users)
     {
@@ -397,7 +397,7 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
      * Begin the process of mailing a mailable class instance.
      *
      * @param  mixed  $users
-     * @return \Illuminate\Mail\PendingMail
+     * @return \WPWhales\Mail\PendingMail
      */
     public function bcc($users)
     {
@@ -419,7 +419,7 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
     /**
      * Send a new message using a view.
      *
-     * @param  \Illuminate\Contracts\Mail\Mailable|string|array  $view
+     * @param  \WPWhales\Contracts\Mail\Mailable|string|array  $view
      * @param  array  $data
      * @param  \Closure|string|null  $callback
      * @return void
@@ -444,7 +444,7 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
     /**
      * Queue a new e-mail message for sending.
      *
-     * @param  \Illuminate\Contracts\Mail\Mailable|string|array  $view
+     * @param  \WPWhales\Contracts\Mail\Mailable|string|array  $view
      * @param  string|null  $queue
      * @return mixed
      */
@@ -465,7 +465,7 @@ class MailFake implements Factory, Fake, Mailer, MailQueue
      * Queue a new e-mail message for sending after (n) seconds.
      *
      * @param  \DateTimeInterface|\DateInterval|int  $delay
-     * @param  \Illuminate\Contracts\Mail\Mailable|string|array  $view
+     * @param  \WPWhales\Contracts\Mail\Mailable|string|array  $view
      * @param  string|null  $queue
      * @return mixed
      */

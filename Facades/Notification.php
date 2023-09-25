@@ -1,25 +1,25 @@
 <?php
 
-namespace Illuminate\Support\Facades;
+namespace WPWhales\Support\Facades;
 
-use Illuminate\Notifications\AnonymousNotifiable;
-use Illuminate\Notifications\ChannelManager;
-use Illuminate\Support\Testing\Fakes\NotificationFake;
+use WPWhales\Notifications\AnonymousNotifiable;
+use WPWhales\Notifications\ChannelManager;
+use WPWhales\Support\Testing\Fakes\NotificationFake;
 
 /**
- * @method static void send(\Illuminate\Support\Collection|array|mixed $notifiables, mixed $notification)
- * @method static void sendNow(\Illuminate\Support\Collection|array|mixed $notifiables, mixed $notification, array|null $channels = null)
+ * @method static void send(\WPWhales\Support\Collection|array|mixed $notifiables, mixed $notification)
+ * @method static void sendNow(\WPWhales\Support\Collection|array|mixed $notifiables, mixed $notification, array|null $channels = null)
  * @method static mixed channel(string|null $name = null)
  * @method static string getDefaultDriver()
  * @method static string deliversVia()
  * @method static void deliverVia(string $channel)
- * @method static \Illuminate\Notifications\ChannelManager locale(string $locale)
+ * @method static \WPWhales\Notifications\ChannelManager locale(string $locale)
  * @method static mixed driver(string|null $driver = null)
- * @method static \Illuminate\Notifications\ChannelManager extend(string $driver, \Closure $callback)
+ * @method static \WPWhales\Notifications\ChannelManager extend(string $driver, \Closure $callback)
  * @method static array getDrivers()
- * @method static \Illuminate\Contracts\Container\Container getContainer()
- * @method static \Illuminate\Notifications\ChannelManager setContainer(\Illuminate\Contracts\Container\Container $container)
- * @method static \Illuminate\Notifications\ChannelManager forgetDrivers()
+ * @method static \WPWhales\Contracts\Container\Container getContainer()
+ * @method static \WPWhales\Notifications\ChannelManager setContainer(\WPWhales\Contracts\Container\Container $container)
+ * @method static \WPWhales\Notifications\ChannelManager forgetDrivers()
  * @method static void assertSentOnDemand(string|\Closure $notification, callable|null $callback = null)
  * @method static void assertSentTo(mixed $notifiable, string|\Closure $notification, callable|null $callback = null)
  * @method static void assertSentOnDemandTimes(string $notification, int $times = 1)
@@ -29,7 +29,7 @@ use Illuminate\Support\Testing\Fakes\NotificationFake;
  * @method static void assertNothingSentTo(mixed $notifiable)
  * @method static void assertSentTimes(string $notification, int $expectedCount)
  * @method static void assertCount(int $expectedCount)
- * @method static \Illuminate\Support\Collection sent(mixed $notifiable, string $notification, callable|null $callback = null)
+ * @method static \WPWhales\Support\Collection sent(mixed $notifiable, string $notification, callable|null $callback = null)
  * @method static bool hasSent(mixed $notifiable, string $notification)
  * @method static array sentNotifications()
  * @method static void macro(string $name, object|callable $macro)
@@ -37,15 +37,15 @@ use Illuminate\Support\Testing\Fakes\NotificationFake;
  * @method static bool hasMacro(string $name)
  * @method static void flushMacros()
  *
- * @see \Illuminate\Notifications\ChannelManager
- * @see \Illuminate\Support\Testing\Fakes\NotificationFake
+ * @see \WPWhales\Notifications\ChannelManager
+ * @see \WPWhales\Support\Testing\Fakes\NotificationFake
  */
 class Notification extends Facade
 {
     /**
      * Replace the bound instance with a fake.
      *
-     * @return \Illuminate\Support\Testing\Fakes\NotificationFake
+     * @return \WPWhales\Support\Testing\Fakes\NotificationFake
      */
     public static function fake()
     {
@@ -59,7 +59,7 @@ class Notification extends Facade
      *
      * @param  string  $channel
      * @param  mixed  $route
-     * @return \Illuminate\Notifications\AnonymousNotifiable
+     * @return \WPWhales\Notifications\AnonymousNotifiable
      */
     public static function route($channel, $route)
     {

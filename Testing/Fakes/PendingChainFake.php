@@ -1,24 +1,24 @@
 <?php
 
-namespace Illuminate\Support\Testing\Fakes;
+namespace WPWhales\Support\Testing\Fakes;
 
 use Closure;
-use Illuminate\Foundation\Bus\PendingChain;
-use Illuminate\Queue\CallQueuedClosure;
+use WPWhales\Foundation\Bus\PendingChain;
+use WPWhales\Queue\CallQueuedClosure;
 
 class PendingChainFake extends PendingChain
 {
     /**
      * The fake bus instance.
      *
-     * @var \Illuminate\Support\Testing\Fakes\BusFake
+     * @var \WPWhales\Support\Testing\Fakes\BusFake
      */
     protected $bus;
 
     /**
      * Create a new pending chain instance.
      *
-     * @param  \Illuminate\Support\Testing\Fakes\BusFake  $bus
+     * @param  \WPWhales\Support\Testing\Fakes\BusFake  $bus
      * @param  mixed  $job
      * @param  array  $chain
      * @return void
@@ -33,7 +33,7 @@ class PendingChainFake extends PendingChain
     /**
      * Dispatch the job with the given arguments.
      *
-     * @return \Illuminate\Foundation\Bus\PendingDispatch
+     * @return \WPWhales\Foundation\Bus\PendingDispatch
      */
     public function dispatch()
     {

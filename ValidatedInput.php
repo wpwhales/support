@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support;
+namespace WPWhales\Support;
 
 use ArrayIterator;
-use Illuminate\Contracts\Support\ValidatedData;
+use WPWhales\Contracts\Support\ValidatedData;
 use stdClass;
 use Traversable;
 
@@ -113,7 +113,7 @@ class ValidatedInput implements ValidatedData
     /**
      * Get the input as a collection.
      *
-     * @return \Illuminate\Support\Collection
+     * @return \WPWhales\Support\Collection
      */
     public function collect()
     {
